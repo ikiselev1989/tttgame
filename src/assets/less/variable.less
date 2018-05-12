@@ -1,0 +1,55 @@
+@white: #FFF;
+@black: #56445D;
+@palegoldenrode: #C5E99B;
+@linen: #EBEEE7;
+@darkseagreen: #8FBC94;
+@salmon: #F16B6F;
+
+@tablet-bp: ~'(max-width: 1023px)';
+@max-width-desktop: 1024px;
+
+html {
+    font-size: 18px;
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    @media @tablet-bp {
+        font-size: 3vw;
+    }
+}
+
+body {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    color: @white;
+    background-color: @black;
+}
+
+.content-wrapper {
+    margin: 4em auto 2em;
+    padding: 0 2em;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    max-width: @max-width-desktop;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity 400ms;
+}
+
+.fade-enter,
+.fade-leave-to {
+    opacity: 0;
+}
